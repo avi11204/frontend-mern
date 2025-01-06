@@ -56,20 +56,48 @@
     cursor: pointer;
   }
   
-  .update-button {
+  /* .update-button {
     background-color: #4a60dc;
     color: white;
     text-decoration: none;
     border: none;
-    /* display: inline-block; */
+    display: inline-block; 
   }
   
   .delete-button {
     background-color: red;
     color: white;
     border: none;
-  }
-  
+  } */
+  /* Common styles for both buttons */
+.button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* Specific styles for the update button */
+.update-button {
+  background-color: #4a60dc;
+}
+
+/* Specific styles for the delete button */
+.delete-button {
+  background-color: red;
+}
+
+/* Hover effects */
+.button:hover {
+  opacity: 0.9;
+}
+
   /* Media Query for responsiveness */
   @media (max-width: 768px) {
     .create-button-container {
