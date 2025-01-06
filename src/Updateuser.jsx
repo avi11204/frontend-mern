@@ -1,6 +1,81 @@
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import { useParams, useNavigate } from "react-router-dom";
+// import "Updateuser.css";
+// const UpdateUser = () => {
+//   const { id } = useParams();
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [address, setAddress] = useState("");
+//   const navigate = useNavigate();
+
+//   // Fetch existing user data when component mounts
+//   useEffect(() => {
+//     axios
+//       .put(`https://backend-mern-s7bz.onrender.com/api/user/update${id}`)
+//       .then((res) => {
+//         setName(res.data.name);
+//         setEmail(res.data.email);
+//         setAddress(res.data.address);
+//       })
+//       .catch((err) => {
+//         console.log("Failed to fetch user data:", err);
+//       });
+//   }, [id]);
+
+//   const updateUser = (e) => {
+//     e.preventDefault();
+//     axios
+//       .put(`https://backend-mern-s7bz.onrender.com/api/user/update/${id}`, { name, email, address })
+//       .then((result) => {
+//         alert("User updated successfully");
+//         console.log(result.data);
+//         navigate("/");
+//       })
+//       .catch((err) => {
+//         console.log("Failed to update user:", err);
+//       });
+//   };
+
+//   return (
+//     <div>
+//       <h1>Update User</h1>
+//       <form onSubmit={updateUser}>
+//         <label>Enter your name:</label>
+//         <input
+//           type="text"
+//           placeholder="Enter your name"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//         />
+//         <br />
+//         <label>Enter your email:</label>
+//         <input
+//           type="email"
+//           placeholder="Enter your email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//         />
+//         <br />
+//         <label>Enter your address:</label>
+//         <input
+//           type="text"
+//           placeholder="Enter your address"
+//           value={address}
+//           onChange={(e) => setAddress(e.target.value)}
+//         />
+//         <br />
+//         <button type="submit">Submit</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default UpdateUser;
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import "./UpdateUser.css"; // Import the CSS file
 
 const UpdateUser = () => {
   const { id } = useParams();
@@ -12,7 +87,7 @@ const UpdateUser = () => {
   // Fetch existing user data when component mounts
   useEffect(() => {
     axios
-      .put(`https://backend-mern-s7bz.onrender.com/api/user/update${id}`)
+      .get(`https://backend-mern-s7bz.onrender.com/api/user/fetch/${id}`)
       .then((res) => {
         setName(res.data.name);
         setEmail(res.data.email);
@@ -26,7 +101,11 @@ const UpdateUser = () => {
   const updateUser = (e) => {
     e.preventDefault();
     axios
-      .put(`https://backend-mern-s7bz.onrender.com/api/user/update/${id}`, { name, email, address })
+      .put(`https://backend-mern-s7bz.onrender.com/api/user/update/${id}`, {
+        name,
+        email,
+        address,
+      })
       .then((result) => {
         alert("User updated successfully");
         console.log(result.data);
@@ -38,7 +117,7 @@ const UpdateUser = () => {
   };
 
   return (
-    <div>
+    <div className="update-user-container">
       <h1>Update User</h1>
       <form onSubmit={updateUser}>
         <label>Enter your name:</label>
@@ -48,7 +127,6 @@ const UpdateUser = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <br />
         <label>Enter your email:</label>
         <input
           type="email"
@@ -56,7 +134,6 @@ const UpdateUser = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <br />
         <label>Enter your address:</label>
         <input
           type="text"
@@ -64,7 +141,6 @@ const UpdateUser = () => {
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
-        <br />
         <button type="submit">Submit</button>
       </form>
     </div>
