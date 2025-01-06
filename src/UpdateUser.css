@@ -14,7 +14,7 @@
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
-    color: #4a60dc;
+    color: #c4eede;
   }
   
   /* Form labels */
@@ -38,7 +38,7 @@
   .update-user-container button {
     width: 100%;
     padding: 10px;
-    background-color: #4a60dc;
+    background-color:#c4eede;
     color: white;
     border: none;
     border-radius: 5px;
@@ -47,7 +47,7 @@
   }
   
   .update-user-container button:hover {
-    background-color: #3a4db3;
+    background-color:#c4eede;
   }
   
   /* Media Query for responsiveness */
