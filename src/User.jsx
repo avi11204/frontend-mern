@@ -157,7 +157,7 @@ const User = () => {
   return (
     <div>
       <img
-        src="https://t3.ftcdn.net/jpg/03/67/35/72/360_F_367357209_BG07SVnnB4HSHSaMiHajfZhrZZAE859A.jpg"
+        src="https://i.pinimg.com/originals/51/bd/c9/51bdc900f42f3fc2d25ff6eaba2e15a1.gif"
         className="user-image"
         alt="Centered"
       />
