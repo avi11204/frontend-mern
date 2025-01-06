@@ -1,22 +1,71 @@
-/* Styling the update and delete buttons */
-.action-button {
-  margin-right: 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
-  width: 100px; /* Fixed width for consistency */
+/* Centering the image */
+.user-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Specific styles for the update button */
+/* Centering the create button container */
+.create-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+/* Styling the create button */
+.create-button {
+  padding: 10px 20px;
+  background-color: #4a60dc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Centering the Userslist heading */
+.userslist-heading {
+  text-align: center;
+  font-size: 24px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+/* Styling the table */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Styling the update and delete buttons */
+.action-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 120px; /* Consistent button width */
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* Update button style */
 .update-button {
   background-color: #4a60dc;
   color: white;
   border: none;
 }
 
-/* Specific styles for the delete button */
+/* Delete button style */
 .delete-button {
   background-color: red;
   color: white;
@@ -29,23 +78,31 @@
   opacity: 0.9;
 }
 
-/* Media Query for responsiveness */
+/* Media Query for smaller screens */
 @media (max-width: 768px) {
+  /* Adjusting the create button container */
   .create-button-container {
     height: auto;
     margin-bottom: 20px;
   }
 
+  /* Create button full width */
   .create-button,
   .action-button {
-    width: 100%;
+    width: 100%; /* Full width for small screens */
     text-align: center;
     margin-bottom: 10px;
   }
 
+  /* Smaller padding and font size for table cells */
   .user-table th,
   .user-table td {
     padding: 5px;
     font-size: 14px;
+  }
+
+  /* Adjust heading size */
+  .userslist-heading {
+    font-size: 20px;
   }
 }
