@@ -1,130 +1,90 @@
-/* Centering the image */
-.user-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Rounded corners */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #E7E8D1;
+  color: #333;
 }
 
-/* Centering the create button container */
-.create-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-/* Styling the create button */
-.create-button {
-  padding: 10px 20px;
-  background-color: #4a60dc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  transition: background-color 0.3s ease;
-}
-
-/* Hover effect for create button */
-.create-button:hover {
-  background-color: #3948c3;
-}
-
-/* Centering the Userslist heading */
-.userslist-heading {
+footer {
+  background-color: #fffbda;
+  color: #000000;
   text-align: center;
-  font-size: 24px;
-  text-decoration: underline;
-  margin-bottom: 20px;
-  font-weight: bold;
+  padding: 20px;
+  font-size: 1em;
+  margin-top: 50px;
+
 }
 
-/* Styling the table */
-.user-table {
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #224e35;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  background-color: #ffffff;
 }
 
-.user-table th,
-.user-table td {
+th, td {
   padding: 10px;
   border: 1px solid #ddd;
   text-align: left;
-  font-size: 16px;
 }
 
-/* Table header style */
-.user-table th {
-  background-color: #4a60dc;
-  color: white;
-  text-align: center;
+th {
+  background-color: #A7BEAE;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-/* Styling the update and delete buttons */
-.action-button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 14px;
+button {
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: #fcffdc;
+  color: #000000;
+  /* border: 5px; */
+  border-radius: 4px;
+  border-color: #000000;
   cursor: pointer;
-  width: 100px;
-  text-align: center;
-  border: none;
-  color: white;
-  display: inline-block;
-}
-
-/* Update button style */
-.update-button {
-  background-color: #4a60dc;
-  margin-right: 10px;
+  font-size: 14px;
   transition: background-color 0.3s ease;
 }
 
-/* Delete button style */
-.delete-button {
-  background-color: red;
-  transition: background-color 0.3s ease;
-}
-
-/* Hover effects for buttons */
-.update-button:hover {
-  background-color: #3948c3;
-}
-
-.delete-button:hover {
-  background-color: darkred;
-}
-
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-  /* Adjust create button container */
-  .create-button-container {
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  /* Create button full width */
-  .create-button,
-  .action-button {
-    width: 100%; /* Full width for smaller screens */
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  /* Smaller padding and font-size for table cells */
-  .user-table th,
-  .user-table td {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  /* Adjust heading size */
-  .userslist-heading {
-    font-size: 20px;
-  }
+button:hover {
+  background-color: #e3f3ff;
 }
