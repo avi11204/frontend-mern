@@ -161,6 +161,8 @@ const User = () => {
         className="user-image"
         alt="Centered"
       />
+      <br></br>
+      <br></br>
 
       <div className="create-button-container">
         <Link to={`/create`} className="create-button">
