@@ -1,0 +1,124 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.slambook-container {
+  background-image: url('https://i.pinimg.com/originals/01/e2/aa/01e2aad831ded17d2da5f20e8c43ba08.gif');
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center; /* Centers the background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto; /* Enables scrolling if content overflows */
+}
+
+
+/* Semi-transparent box */
+.slambook-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh; /* Ensures the box doesn't exceed the viewport height */
+  overflow-y: auto; /* Enables scrolling inside the box */
+  scrollbar-width: thin;
+  scrollbar-color: #3e768a rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling for WebKit browsers */
+.slambook-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slambook-box::-webkit-scrollbar-thumb {
+  background-color: #3e768a;
+  border-radius: 5px;
+}
+
+.slambook-box::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Fieldset and legend styling */
+.form-legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #3e768a;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.slambook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group label {
+  width: 30%;
+  font-size: 1em;
+  font-weight: bold;
+  color: #3e768a;
+  text-align: right;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 65%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Gender and Actor sections styling */
+.gender-options,
+.actor-options {
+  display: flex;
+  gap: 15px;
+}
+
+.gender-options label,
+.actor-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #3e768a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #276d8c;
+}
