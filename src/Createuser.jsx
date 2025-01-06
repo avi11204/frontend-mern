@@ -53,10 +53,9 @@
 // };
 
 // export default Createuser;
-
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./CreateUser.css"; // Import the CSS file
 
 const CreateUser = () => {
@@ -114,8 +113,28 @@ const CreateUser = () => {
         />
         <button type="submit">Submit</button>
       </form>
+
+      {/* Home Button */}
+      <Link
+        to="/"
+        style={{
+          display: "block",
+          marginTop: "20px",
+          padding: "10px 20px",
+          backgroundColor: "#fcffdc",
+          color: "#333",
+          textDecoration: "none",
+          borderRadius: "6px",
+          textAlign: "center",
+          border: "1px solid #ddd",
+          fontWeight: "600",
+        }}
+      >
+        Home
+      </Link>
     </div>
   );
 };
 
 export default CreateUser;
+
