@@ -34,7 +34,7 @@ const User = () => {
 
   return (
     <div>
-      <img src="https://t3.ftcdn.net/jpg/03/67/35/72/360_F_367357209_BG07SVnnB4HSHSaMiHajfZhrZZAE859A.jpg"/>
+      <img src="https://t3.ftcdn.net/jpg/03/67/35/72/360_F_367357209_BG07SVnnB4HSHSaMiHajfZhrZZAE859A.jpg" align="center"/>
       <Link to="/create">Create User</Link>
       <table border={1} style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
